@@ -1,6 +1,6 @@
 # Parley — AI debate room
 
-![Project overview](docs/portfolio-cover.png)
+![Project overview](docs/project-overview.png)
 
 A local, Docker-based multi-agent conversation app. Create a scenario, choose 2–6 characters, assign personality types and model profiles, and watch them debate in a messaging-style interface. Join the conversation yourself, pause/resume, revisit saved rooms, and export a Markdown transcript.
 
@@ -170,12 +170,6 @@ This is a **single-user local workspace**, not a multi-user hosted product. It i
 - **Database API unavailable:** inspect `db`, `rest`, and `worker-rest` logs. Default credentials are for local development. If replacing database passwords, use URL-safe values in the Compose connection URIs; on an existing volume, changing environment variables alone does not change database role passwords.
 - **PostgreSQL data survives edits:** this is intentional. Do not remove named volumes to apply a code change. Volume deletion permanently removes saved data.
 - **Restart during a reply:** allow up to five minutes for a lost worker lease to expire, or pause and resume the room to invalidate it immediately.
-
-## Portfolio wording
-
-“Built a Docker-based AI debate application with configurable scenarios, personality-driven agents, and per-participant LLM model profiles. Implemented PostgreSQL persistence served through PostgREST, a durable turn worker with lease validation, and a responsive messaging interface.”
-
-Use that description after completing the live checks on your machine; do not claim multi-user production deployment or measured inference performance without additional evidence.
 
 ## References
 
